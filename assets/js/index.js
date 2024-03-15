@@ -12,3 +12,6 @@ fetch("https://api.nasa.gov/planetary/apod?api_key=HcKzIbpGDIu4Y2fxsjRTcl6webEZR
     let picLocation = document.getElementById("");
     picLocation.setAttribute("src", APoD);
   });
+
+  $('hero').css('background-image',
+ 'url("https://apod.nasa.gov/apod/image/2403/Image133k_n1055.jpg")');
