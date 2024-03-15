@@ -24,6 +24,10 @@ fetch("https://api.nasa.gov/planetary/apod?api_key=HcKzIbpGDIu4Y2fxsjRTcl6webEZR
     explanationTitle.textContent = explanation;
   });
 
+
+  $('hero').css('background-image',
+ 'url("https://apod.nasa.gov/apod/image/2403/Image133k_n1055.jpg")');
+
   // no API key needed? -AM
   fetch("https://eonet.gsfc.nasa.gov/api/v3/events?limit=5")
   .then(function (response) {
@@ -43,3 +47,4 @@ fetch("https://api.nasa.gov/planetary/apod?api_key=HcKzIbpGDIu4Y2fxsjRTcl6webEZR
     console.log(event.sources[0].url);
 
   });
+
