@@ -28,5 +28,13 @@ function dateSearch(searchDate) {
         let APoD = data.url;
         console.log(APoD);
       }
+// retreives image title and explanation and writes it to the page -AM
+    // let title = data.title;
+    // let titleLocation = document.getElementById("APoD-title");
+    // titleLocation.textContent = title;
+
+    // let explanation = data.explanation;
+    // let explanationText = document.getElementById("APoD-exp");
+    // explanationText.textContent = explanation;
     });
 }
