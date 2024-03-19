@@ -11,7 +11,7 @@ $("#search-btn").click(function () {
 
 // handles the api get call -AM
 function dateSearch(searchDate) {
-// url takes in reformated date from js:8 -AM
+  // url takes in reformated date from js:8 -AM
   let dateSearchUrl = `https://api.nasa.gov/planetary/apod?api_key=HcKzIbpGDIu4Y2fxsjRTcl6webEZRL4GSVy57yHN&date=${searchDate}`;
 
   fetch(dateSearchUrl)
@@ -28,13 +28,13 @@ function dateSearch(searchDate) {
         let APoD = data.url;
         console.log(APoD);
       }
-// retreives image title and explanation and writes it to the page -AM
-    // let title = data.title;
-    // let titleLocation = document.getElementById("APoD-title");
-    // titleLocation.textContent = title;
+      // retreives image title and explanation and writes it to the page -AM
+      // let title = data.title;
+      // let titleLocation = document.getElementById("APoD-title");
+      // titleLocation.textContent = title;
 
-    // let explanation = data.explanation;
-    // let explanationText = document.getElementById("APoD-exp");
-    // explanationText.textContent = explanation;
+      // let explanation = data.explanation;
+      // let explanationText = document.getElementById("APoD-exp");
+      // explanationText.textContent = explanation;
     });
 }

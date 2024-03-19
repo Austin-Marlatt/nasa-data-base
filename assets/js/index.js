@@ -8,7 +8,7 @@ fetch(
   })
   .then(function (data) {
     console.log(data);
-// checks if HD image is availble, defaults to SD, sets to background-photo -AM
+    // checks if HD image is availble, defaults to SD, sets to background-photo -AM
     if (data.hdurl) {
       let APoD = data.hdurl;
       $("hero").css("background-image", `url(${APoD})`);
@@ -17,7 +17,7 @@ fetch(
 
       $("hero").css("background-image", `url(${APoD})`);
     }
-// retreives image title and explanation and writes it to the page -AM
+    // retreives image title and explanation and writes it to the page -AM
     let title = data.title;
     let titleLocation = document.getElementById("APoD-title");
     titleLocation.textContent = title;
