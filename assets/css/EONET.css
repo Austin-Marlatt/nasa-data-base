@@ -1,6 +1,6 @@
-.section {
-    padding-left: 200px;
-    padding-top: 300px;
+html {
+    background-color: grey;
+    background-image: url('https://www.worldatlas.com/upload/7d/db/c3/shutterstock-1558058690.jpg');
 }
 
 .tile.is-child.box {
@@ -8,17 +8,13 @@
     color: #ffffff; 
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
+}
 
 .title {
     font-family: 'Roboto', sans-serif;
     color: #ffd900cc;
 }
 
-.description {
-    font-family: 'Arial', sans-serif;
-}
-
-header {
+.header {
     text-align: center;
 }

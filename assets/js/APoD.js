@@ -22,7 +22,7 @@ function getImageInfo(data) {
 let history = JSON.parse(window.localStorage.getItem("history")) || [];
 function GetHistory() {
   for(let i=0; i < history.length; i++) {
-    $("#history").append(`<option>${history[i].}</option>`);
+    // $("#history").append(`<option>${history[i].}</option>`);
   }
 
 
