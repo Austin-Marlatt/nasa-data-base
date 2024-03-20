@@ -20,13 +20,24 @@ function getImageInfo(data) {
 }
 
 let history = JSON.parse(window.localStorage.getItem("history")) || [];
-function GetHistory() {
-  for(let i=0; i < history.length; i++) {
-    // $("#history").append(`<option>${history[i].}</option>`);
-  }
 
-
+for(let i=0; i < history.length; i++) {
+  $("#history").append(`<option value="${history[i].date}">${history[i].date}</option>`);
 }
+
+
+function historySearch() {
+  let search = $("#history").val();
+  console.log(search);
+  let searchDate = dayjs(search).format("YYYY-MM-DD");
+      dateSearch(searchDate);
+    }
+
+
+$("#history-search").click(function() {
+  historySearch();
+});
+
 $( "#history" )
   .selectmenu()
   .selectmenu( "menuWidget" )
@@ -46,27 +57,31 @@ function dateSearch(searchDate) {
       // TODO: display image on page -AM
       if (data.hdurl) {
         let APoD = data.hdurl;
+        let date = data.date;
         console.log(APoD);
         $("#image").attr("src",`${APoD}`);
         getImageInfo(data);
 
         let historyInfo = {
-          history: APoD,
-          info: data,
+          url: dateSearchUrl,
+          date: date,
         }
+
         history.push(historyInfo);
         window.localStorage.setItem("history", JSON.stringify(history));
 
       } else {
         let APoD = data.url;
+        let date = data.date;
         console.log(APoD);
         $("#image").attr("src",`${APoD}`);
         getImageInfo(data);
 
         let historyInfo = {
-          history: APoD,
-          info: data,
+          url: dateSearchUrl,
+          date: date,
         }
+
         history.push(historyInfo);
         window.localStorage.setItem("history", JSON.stringify(history));
       }
