@@ -9,32 +9,44 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
+    <link rel="stylesheet" href="./assets/css/EONET.css"/>
   </head>
   
-    <div class="box">
+    <div class="">
 <a href="homepage.html"><button class="button">Back To Home</button></a>
+<a href="APoD.html"><button class="button">APoD</button></a>
 </div>
 
   <body>
-    <header>
-      <h1>EONET</h1>
-    </header>
-
-    <section>
-      <p id="title"></p>
-      <p id="event-id"></p>
-      <p id="category"></p>
-      <p id="time-date"></p>
-      <p id="description"></p>
-      <p id="geometry-units"></p>
-      <p id="geometry-value"></p>
-      <p id="sources"></p>
-    </section>
+    <section class="section">
+      <div class="container">
+          <header class="header">
+            <h1 class="has-text-weight-bold title" style="font-size: 100px;">E.O.N.E.T</h1>
+            <p class="is-size-2" style="color: white;"><strong>E</strong>arth <strong>O</strong>bservatory <strong>N</strong>atural <strong>E</strong>vent <strong>T</strong>racker</p>
+          </header>
+          <div class="tile is-ancestor is-pulled-right pt-6">
+          <div class="tile is-parent is-8">
+            <div class="tile is-child box">
+              <section> <!--Start of Eonet Information-->
+                <p class="title">Name:</p> <p class="has-text-weight-bold" id="title"></p>
+                <p class="title">Eonet Id:</p> <p class="has-text-weight-bold" id="event-id"></p>
+                <p class="title">Category:</p> <p class="has-text-weight-bold" id="category"></p>
+                <p class="title">Time:</p> <p class="has-text-weight-bold" id="time-date"></p>
+                <p class="title">Description:</p> <p id="description"></p>
+                <p class="title">Units:</p> <p class="has-text-weight-bold" id="geometry-units"></p>
+                <p class="title">Value:</p> <p class="has-text-weight-bold" id="geometry-value"></p>
+                <p class="title">Source:</p> <p class="has-text-weight-bold" id="sources"></p>
+              </section> <!--End of Eonet Information-->
+            </div>
+          </div>
+        </div>
+    </div>
+   </section>
     <!-- google maps API with my working key, pls dont spam this -AM -->
     <iframe
       id="map"
-      width="600"
-      height="450"
+      width="1100"
+      height="800"
       style="border: 0"
       loading="lazy"
       allowfullscreen

@@ -20,7 +20,6 @@ function getImageInfo(data) {
 }
 
 let history = JSON.parse(window.localStorage.getItem("history")) || [];
-console.log(history);
 
 for(let i=0; i < history.length; i++) {
   $("#history").append(`<option value="${history[i].date}">${history[i].date}</option>`);
