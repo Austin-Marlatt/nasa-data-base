@@ -9,6 +9,29 @@ $("#search-btn").click(function () {
   dateSearch(searchDate);
 });
 
+// retreives image title and explanation and writes it to the page -AM
+function getImageInfo(data) {
+  let title = data.title;
+  let titleLocation = document.getElementById("APoD-title");
+  titleLocation.textContent = title;
+  let explanation = data.explanation;
+  let explanationText = document.getElementById("APoD-exp");
+  explanationText.textContent = explanation;
+}
+
+let history = JSON.parse(window.localStorage.getItem("history")) || [];
+function GetHistory() {
+  for(let i=0; i < history.length; i++) {
+    $("#history").append(`<option>${history[i].}</option>`);
+  }
+
+
+}
+$( "#history" )
+  .selectmenu()
+  .selectmenu( "menuWidget" )
+    .addClass( "overflow" );
+
 // handles the api get call -AM
 function dateSearch(searchDate) {
   // url takes in reformated date from js:8 -AM
@@ -24,19 +47,29 @@ function dateSearch(searchDate) {
       if (data.hdurl) {
         let APoD = data.hdurl;
         console.log(APoD);
-        $("#image").attr("src",`${APoD}`)
+        $("#image").attr("src",`${APoD}`);
+        getImageInfo(data);
+
+        let historyInfo = {
+          history: APoD,
+          info: data,
+        }
+        history.push(historyInfo);
+        window.localStorage.setItem("history", JSON.stringify(history));
+
       } else {
         let APoD = data.url;
         console.log(APoD);
-        $("#image").attr("src",`${APoD}`)
-      }
-      // retreives image title and explanation and writes it to the page -AM
-      let title = data.title;
-      let titleLocation = document.getElementById("APoD-title");
-      titleLocation.textContent = title;
+        $("#image").attr("src",`${APoD}`);
+        getImageInfo(data);
 
-      let explanation = data.explanation;
-      let explanationText = document.getElementById("APoD-exp");
-      explanationText.textContent = explanation;
+        let historyInfo = {
+          history: APoD,
+          info: data,
+        }
+        history.push(historyInfo);
+        window.localStorage.setItem("history", JSON.stringify(history));
+      }
+
     });
 }

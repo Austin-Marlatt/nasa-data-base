@@ -11,6 +11,12 @@
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/APoD.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <style>
+    label { display: block; }
+    select { width: 200px; }
+    .overflow { height: 200px; }
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
@@ -29,6 +35,12 @@
     <!-- input field used for the datepicker widget -AM -->
     
       <header class="footer">
+<!-- modal to access history -->
+        <label for="history">History:</label>
+        <select name="history" id="history">
+        <option>1</option>
+        </select>
+
         <div class="content has-text-centered">
           <h1 class="title">Search APoD for a past date!</h1>
         </div>
