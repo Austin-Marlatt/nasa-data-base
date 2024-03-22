@@ -1,6 +1,5 @@
 // fetches first 5 eonet events -AM
 function getEvent() {
-
   fetch("https://eonet.gsfc.nasa.gov/api/v3/events?limit=5")
     .then(function (response) {
       return response.json();
@@ -32,9 +31,7 @@ function getEvent() {
         "src",
         `https://www.google.com/maps/embed/v1/place?key=AIzaSyALVHUah6fxUBeyPbNT4egSXn6uqKqjoR8&q=${location}`
       );
-  });
-
+    });
 }
 
 getEvent();
-

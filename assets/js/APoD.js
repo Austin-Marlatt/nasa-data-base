@@ -25,27 +25,26 @@ let history = JSON.parse(window.localStorage.getItem("history")) || [];
 
 // assigns the history option fields with previous searches found in localStorage;
 // displays APoD title and date -AM
-for(let i=0; i < history.length; i++) {
-  $("#history").append(`<option value="${history[i].date}">${history[i].title}, ${history[i].date}</option>`);
+for (let i = 0; i < history.length; i++) {
+  $("#history").append(
+    `<option value="${history[i].date}">${history[i].title}, ${history[i].date}</option>`
+  );
 }
 
 // uses date found in selected history "value" attribute, formats with dayjs so APoD api can read it, runs dateSearch() with formated date -AM
 function historySearch() {
   let search = $("#history").val();
   let searchDate = dayjs(search).format("YYYY-MM-DD");
-      dateSearch(searchDate);
-    }
+  dateSearch(searchDate);
+}
 
 // event handler for search button attached to the history dropdown, runs historySearch() when clicked -AM
-$("#history-search").click(function() {
+$("#history-search").click(function () {
   historySearch();
 });
 
 // methods imported from jQuery to create a dropdown menu for the history search -AM
-$( "#history" )
-  .selectmenu()
-  .selectmenu( "menuWidget" )
-    .addClass( "overflow" );
+$("#history").selectmenu().selectmenu("menuWidget").addClass("overflow");
 
 // handles the APoD api get call -AM
 function dateSearch(searchDate) {
@@ -65,7 +64,7 @@ function dateSearch(searchDate) {
         let date = data.date;
         let title = data.title;
         //  prints image to page -AM
-        $("#image").attr("src",`${APoD}`);
+        $("#image").attr("src", `${APoD}`);
         getImageInfo(data);
 
         // object containing important data from this APoD search
@@ -73,29 +72,27 @@ function dateSearch(searchDate) {
           title: title,
           url: dateSearchUrl,
           date: date,
-        }
+        };
 
-        // adds the previous object to the end of the historey array, 
+        // adds the previous object to the end of the historey array,
         // commits to local storage
         history.push(historyInfo);
         window.localStorage.setItem("history", JSON.stringify(history));
-
       } else {
         let APoD = data.url;
         let date = data.date;
         let title = data.title;
-        $("#image").attr("src",`${APoD}`);
+        $("#image").attr("src", `${APoD}`);
         getImageInfo(data);
 
         let historyInfo = {
           title: title,
           url: dateSearchUrl,
           date: date,
-        }
+        };
 
         history.push(historyInfo);
         window.localStorage.setItem("history", JSON.stringify(history));
       }
-
     });
 }

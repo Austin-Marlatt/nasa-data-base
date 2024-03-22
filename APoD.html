@@ -9,14 +9,26 @@
       rel="stylesheet"
       href="http://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="./assets/css/APoD.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="./assets/css/APoD.css" />
     <!-- styles for the history select menu -->
     <style>
-    label { display: block; }
-    select { width: 200px; }
-    .overflow { height: 200px; }
+      label {
+        display: block;
+      }
+      select {
+        width: 200px;
+      }
+      .overflow {
+        height: 200px;
+      }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -30,53 +42,61 @@
   </head>
 
   <body>
-
     <!-- input field used for the datepicker widget -AM -->
-    
-      <header class="footer">
-        <div>
-          <a href="homepage.html"><button class="button is-responsive">Back To Home</button></a>
-        </div>
-<!-- modal to access history -->
-        <label for="history">History:</label>
-        <select name="history" id="history">
-        </select>
-        <button id="history-search" class="button is-responsive">Search</button>
 
-        <div class="content has-text-centered">
-          <h1 class="title">Search APoD for a past date!</h1>
-        </div>
-      </header>
-      <div  id="container">
-        <input class="input is-large $input-border-color is-black" type="text" placeholder="Search APoD in the past!" id="datepicker" />
-        <button class="button is-large is-light" type="button" id="search-btn">Search</button>
+    <header class="footer">
+      <div>
+        <a href="homepage.html"
+          ><button class="button is-responsive">Back To Home</button></a
+        >
       </div>
+      <!-- modal to access history -->
+      <label for="history">History:</label>
+      <select name="history" id="history"></select>
+      <button id="history-search" class="button is-responsive">Search</button>
 
-      <div class="card">
-        <div class="card-image">
-          <figure class="image is-4by3">
-            <img id="image" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-          </figure>
+      <div class="content has-text-centered">
+        <h1 class="title">Search APoD for a past date!</h1>
+      </div>
+    </header>
+    <div id="container">
+      <input
+        class="input is-large $input-border-color is-black"
+        type="text"
+        placeholder="Search APoD in the past!"
+        id="datepicker"
+      />
+      <button class="button is-large is-light" type="button" id="search-btn">
+        Search
+      </button>
+    </div>
+
+    <div class="card">
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img
+            id="image"
+            src="https://bulma.io/images/placeholders/1280x960.png"
+            alt="Placeholder image"
+          />
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <p id="APoD-title" class="title is-4">Picture title</p>
+          </div>
         </div>
-        <div class="card-content">
-          <div class="media">
-            
-            <div class="media-content">
-              <p id="APoD-title" class="title is-4">Picture title</p>
-              
-            </div>
-          </div>
-      
-          <div id="APoD-exp" class="content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Phasellus nec iaculis mauris.
-            <br>
-            <!-- insert date the picture was taken from API -->
-            <time datetime="2016-1-1">1 Jan 2016</time>
-          </div>
+
+        <div id="APoD-exp" class="content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+          iaculis mauris.
+          <br />
+          <!-- insert date the picture was taken from API -->
+          <time datetime="2016-1-1">1 Jan 2016</time>
         </div>
       </div>
-    
+    </div>
 
     <!-- js file -AM -->
     <script src="./assets/js/APoD.js"></script>
