@@ -1,3 +1,7 @@
+#homepage-title {
+    margin: 5% 0;
+}
+
 .section {
     padding-left: 200px;
     padding-top: 300px;
@@ -17,8 +21,4 @@
 
 .description {
     font-family: 'Arial', sans-serif;
-}
-
-header {
-    text-align: center;
 }
