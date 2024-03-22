@@ -1,6 +1,9 @@
 // fetches first 5 eonet events -AM
+let categorySearchUrl = "https://eonet.gsfc.nasa.gov/api/v3/events?limit=5";
+
 function getEvent() {
-  fetch("https://eonet.gsfc.nasa.gov/api/v3/events?limit=5")
+  let categorySearch = categorySearchUrl
+  fetch(categorySearch)
     .then(function (response) {
       return response.json();
     })
@@ -35,3 +38,17 @@ function getEvent() {
 }
 
 getEvent();
+
+function categorySearch() {
+  let search = $("#categories").val();
+  let categorySearchUrl = `https://eonet.gsfc.nasa.gov/api/v3/categories/${search}?limit=5`;
+  getEvent(categorySearchUrl);
+  console.log(categorySearchUrl);
+  console.log(search);
+};
+
+$("#categories-search").click(function () {
+  categorySearch();
+  $("trees").modal();
+});
+
