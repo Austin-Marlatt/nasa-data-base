@@ -22,18 +22,3 @@
 .description {
     font-family: 'Arial', sans-serif;
 }
-
-.header {
-    text-align: center;
-    color: aqua;
-}
-
-.apod {
-    text-align: center;
-    padding-top: 300px;
-   padding-left: 380px;
-}
-
-.container {
-    padding-top: 300px;
-}
