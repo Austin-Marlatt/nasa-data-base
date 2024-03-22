@@ -31,7 +31,7 @@
     </style>
   </head>
 
-  <header>
+  <div id="footer-header">
     <div>
       <a href="homepage.html"
         ><button class="button is-responsive">Back To Home</button></a
@@ -39,27 +39,33 @@
       <a href="APoD.html"><button class="button is-responsive">APoD</button></a>
     </div>
 
-    <label for="categories">Search by Categories:</label>
-    <select name="categories" id="categories">
-      <option>Select a Category</option>
-      <option value="6">Drought</option>
-      <option value="7">Dust and Haze</option>
-      <option value="16">Earthquakes</option>
-      <option value="9">Floods</option>
-      <option value="14">Landslides</option>
-      <option value="19">Manmade</option>
-      <option value="15">Sea and Lake Ice</option>
-      <option value="10">Severe Storms</option>
-      <option value="17">Snow</option>
-      <option value="18">Temperature Extremes</option>
-      <option value="12">Volcanoes</option>
-      <option value="13">Water Color</option>
-      <option value="8">Wildfires</option>
-    </select>
 
+    <div class="dropdown">
+      <label for="categories">Search by Categories:</label>
+      <select name="Categories" id="Categories">
+        <option>Select a Category</option>
+        <option value="6">Drought</option>
+        <option value="7">Dust and Haze</option>
+        <option value="16">Earthquakes</option>
+        <option value="9">Floods</option>
+        <option value="14">Landslides</option>
+        <option value="19">Manmade</option>
+        <option value="15">Sea and Lake Ice</option>
+        <option value="10">Severe Storms</option>
+        <option value="17">Snow</option>
+        <option value="18">Temperature Extremes</option>
+        <option value="12">Volcanoes</option>
+        <option value="13">Water Color</option>
+        <option value="8">Wildfires</option>
+      </select>
+    </div>
+
+    <button id="categories-search" class="button is-responsive">Search</button>
+  </div>
+  
+  <body>
     <a href="#categories-chosen" rel="modal:open"><button id="categories-search" class="button is-responsive">Search</button></a>
   </header>
-  <body>
 
     <ul id="categories-chosen" class = "modal">
       <li><button class="button is-responsive"> Magenta Fire</button></li>
@@ -68,12 +74,7 @@
       <li><button class="button is-responsive"> Magenta Fire</button></li>
       <li><button class="button is-responsive"> Magenta Fire</button></li>
     </ul>
-
-    <a href="#categories-chosen" rel="modal:open"></a>
-
-
-    <section class="section">
-      <div class="container">
+  
         <header class="header">
           <h1 class="has-text-weight-bold title" style="font-size: 100px">
             E.O.N.E.T
@@ -84,48 +85,53 @@
             <strong>T</strong>racker
           </p>
         </header>
-        <div class="tile is-ancestor is-pulled-right pt-6">
-          <div class="tile is-parent is-8">
-            <div class="tile is-child box">
-              <section>
-                <!--Start of eonet Information-->
-                <p class="title">Name:</p>
-                <p class="has-text-weight-bold" id="title"></p>
-                <p class="title">Eonet Id:</p>
-                <p class="has-text-weight-bold" id="event-id"></p>
-                <p class="title">Category:</p>
-                <p class="has-text-weight-bold" id="category"></p>
-                <p class="title">Time:</p>
-                <p class="has-text-weight-bold" id="time-date"></p>
-                <p class="title">Description:</p>
-                <p id="description"></p>
-                <p class="title">Units:</p>
-                <p class="has-text-weight-bold" id="geometry-units"></p>
-                <p class="title">Value:</p>
-                <p class="has-text-weight-bold" id="geometry-value"></p>
-                <p class="title">Source:</p>
-                <p class="has-text-weight-bold" id="sources"></p>
-              </section>
-              <!--End of eonet Information-->
+        <div class="wrapper">
+          <div class="item item-1">
+            <div class="tile is-ancestor pt-6">
+              <div class="tile is-parent is-6">
+                <div class="tile is-child box">
+                  <section>
+                    <!--Start of eonet Information-->
+                    <p class="title">Name:</p>
+                    <p class="has-text-weight-bold" id="title"></p>
+                    <p class="title">Eonet Id:</p>
+                    <p class="has-text-weight-bold" id="event-id"></p>
+                    <p class="title">Category:</p>
+                    <p class="has-text-weight-bold" id="category"></p>
+                    <p class="title">Time:</p>
+                    <p class="has-text-weight-bold" id="time-date"></p>
+                    <p class="title">Description:</p>
+                    <p id="description"></p>
+                    <p class="title">Units:</p>
+                    <p class="has-text-weight-bold" id="geometry-units"></p>
+                    <p class="title">Value:</p>
+                    <p class="has-text-weight-bold" id="geometry-value"></p>
+                    <p class="title">Source:</p>
+                    <p class="has-text-weight-bold" id="sources"></p>
+                  </section>
+                  <!--End of eonet Information-->
+                </div>
+              </div>
             </div>
           </div>
+          
+        
+        <!-- google maps API with my working key -AM -->
+        <div class="item item-2">
+          <iframe 
+          id="map"
+          width="650"
+          height="650"
+          style="border: 0"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyALVHUah6fxUBeyPbNT4egSXn6uqKqjoR8
+          &q=Space+Needle,Seattle+WA"
+          >
+        </iframe>
         </div>
-      </div>
-    </section>
-    <!-- google maps API with my working key -AM -->
-    <iframe
-      id="map"
-      width="1100"
-      height="800"
-      style="border: 0"
-      loading="lazy"
-      allowfullscreen
-      referrerpolicy="no-referrer-when-downgrade"
-      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyALVHUah6fxUBeyPbNT4egSXn6uqKqjoR8
-    &q=Space+Needle,Seattle+WA"
-    >
-    </iframe>
-
+          
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="./assets/js/maps.js"></script>
