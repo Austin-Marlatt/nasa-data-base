@@ -3,11 +3,8 @@ html {
     background-image: url('https://www.worldatlas.com/upload/7d/db/c3/shutterstock-1558058690.jpg');
 }
 
-.tile.is-child.box {
-    background-color: #0c0f1c;
-    color: #ffffff; 
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+.header {
+    text-align: center;
 }
 
 .title {
@@ -15,6 +12,14 @@ html {
     color: #ffd900cc;
 }
 
-.header {
-    text-align: center;
+.tile.is-child.box {
+    background-color: #0c0f1c;
+    color: #ffffff; 
+    border-radius: 10px;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.524);
+}
+
+#map {
+    border-radius: 10px;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.357);
 }
