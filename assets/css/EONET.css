@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
     background-color: grey;
     background-image: url('https://www.worldatlas.com/upload/7d/db/c3/shutterstock-1558058690.jpg');
@@ -5,6 +9,7 @@ html {
 
 .header {
     text-align: center;
+    margin: 100px;
 }
 
 #footer-header {
@@ -33,7 +38,19 @@ html {
     box-shadow: 0 0 18px rgba(0, 0, 0, 0.524);
 }
 
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-auto-rows: 1fr;
+    align-items: center;
+    justify-content: auto;
+    justify-content: space-evenly;
+    padding: 200px;
+}
+
 #map {
     border-radius: 10px;
     box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.357);
+    height: 635px;
 }
