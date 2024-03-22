@@ -4,19 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EONET</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/EONET.css"/>
+    <style>
+      label { display: block; }
+      select { width: 200px; }
+      .overflow { height: 200px; }
+    </style>
   </head>
-  
-    <div class="">
-<a href="homepage.html"><button class="button">Back To Home</button></a>
-<a href="APoD.html"><button class="button">APoD</button></a>
-</div>
 
+<header>
+  <div>
+    <a href="homepage.html"><button class="button is-responsive">Back To Home</button></a>
+    <a href="APoD.html"><button class="button is-responsive">APoD</button></a>
+  </div>
+
+  <label for="categories">Search by Categories:</label>
+  <select name="Categories" id="Categories">
+    <option>Select a Category</option>
+    <option value ="6">Drought</option>
+    <option value ="7">Dust and Haze</option>
+    <option value ="16">Earthquakes</option>
+    <option value ="9">Floods</option>
+    <option value ="14">Landslides</option>
+    <option value ="19">Manmade</option>
+    <option value ="15">Sea and Lake Ice</option>
+    <option value ="10">Severe Storms</option>
+    <option value ="17">Snow</option>
+    <option value ="18">Temperature Extremes</option>
+    <option value ="12">Volcanoes</option>
+    <option value ="13">Water Color</option>
+    <option value ="8">Wildfires</option>
+  </select>
+
+  <button id="categories-search" class="button is-responsive">Search</button>
+
+</header>
   <body>
     <section class="section">
       <div class="container">
@@ -27,7 +54,7 @@
           <div class="tile is-ancestor is-pulled-right pt-6">
           <div class="tile is-parent is-8">
             <div class="tile is-child box">
-              <section> <!--Start of Eonet Information-->
+              <section> <!--Start of eonet Information-->
                 <p class="title">Name:</p> <p class="has-text-weight-bold" id="title"></p>
                 <p class="title">Eonet Id:</p> <p class="has-text-weight-bold" id="event-id"></p>
                 <p class="title">Category:</p> <p class="has-text-weight-bold" id="category"></p>
@@ -36,12 +63,12 @@
                 <p class="title">Units:</p> <p class="has-text-weight-bold" id="geometry-units"></p>
                 <p class="title">Value:</p> <p class="has-text-weight-bold" id="geometry-value"></p>
                 <p class="title">Source:</p> <p class="has-text-weight-bold" id="sources"></p>
-              </section> <!--End of Eonet Information-->
+              </section> <!--End of eonet Information-->
             </div>
           </div>
         </div>
     </div>
-   </section>
+    </section>
     <!-- google maps API with my working key, pls dont spam this -AM -->
     <iframe
       id="map"
