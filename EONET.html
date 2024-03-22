@@ -70,39 +70,41 @@
             <strong>T</strong>racker
           </p>
         </header>
-        <div class="tile is-ancestor is-pulled-right pt-6">
-          <div class="tile is-parent is-8">
-            <div class="tile is-child box">
-              <section>
-                <!--Start of eonet Information-->
-                <p class="title">Name:</p>
-                <p class="has-text-weight-bold" id="title"></p>
-                <p class="title">Eonet Id:</p>
-                <p class="has-text-weight-bold" id="event-id"></p>
-                <p class="title">Category:</p>
-                <p class="has-text-weight-bold" id="category"></p>
-                <p class="title">Time:</p>
-                <p class="has-text-weight-bold" id="time-date"></p>
-                <p class="title">Description:</p>
-                <p id="description"></p>
-                <p class="title">Units:</p>
-                <p class="has-text-weight-bold" id="geometry-units"></p>
-                <p class="title">Value:</p>
-                <p class="has-text-weight-bold" id="geometry-value"></p>
-                <p class="title">Source:</p>
-                <p class="has-text-weight-bold" id="sources"></p>
-              </section>
-              <!--End of eonet Information-->
+        <div class="map-infocard">
+          <div class="tile is-ancestor is-pulled-right pt-6">
+            <div class="tile is-parent is-8">
+              <div class="tile is-child box">
+                <section>
+                  <!--Start of eonet Information-->
+                  <p class="title">Name:</p>
+                  <p class="has-text-weight-bold" id="title"></p>
+                  <p class="title">Eonet Id:</p>
+                  <p class="has-text-weight-bold" id="event-id"></p>
+                  <p class="title">Category:</p>
+                  <p class="has-text-weight-bold" id="category"></p>
+                  <p class="title">Time:</p>
+                  <p class="has-text-weight-bold" id="time-date"></p>
+                  <p class="title">Description:</p>
+                  <p id="description"></p>
+                  <p class="title">Units:</p>
+                  <p class="has-text-weight-bold" id="geometry-units"></p>
+                  <p class="title">Value:</p>
+                  <p class="has-text-weight-bold" id="geometry-value"></p>
+                  <p class="title">Source:</p>
+                  <p class="has-text-weight-bold" id="sources"></p>
+                </section>
+                <!--End of eonet Information-->
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
     <!-- google maps API with my working key -AM -->
-    <iframe
+    <iframe 
       id="map"
-      width="1100"
-      height="800"
+      width="650"
+      height="650"
       style="border: 0"
       loading="lazy"
       allowfullscreen
