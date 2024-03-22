@@ -7,6 +7,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link
       rel="stylesheet"
       href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"
@@ -38,7 +40,7 @@
     </div>
 
     <label for="categories">Search by Categories:</label>
-    <select name="Categories" id="Categories">
+    <select name="categories" id="categories">
       <option>Select a Category</option>
       <option value="6">Drought</option>
       <option value="7">Dust and Haze</option>
@@ -55,9 +57,21 @@
       <option value="8">Wildfires</option>
     </select>
 
-    <button id="categories-search" class="button is-responsive">Search</button>
+    <a href="#categories-chosen" rel="modal:open"><button id="categories-search" class="button is-responsive">Search</button></a>
   </header>
   <body>
+
+    <ul id="categories-chosen" class = "modal">
+      <li><button class="button is-responsive"> Magenta Fire</button></li>
+      <li><button class="button is-responsive"> Magenta Fire</button></li>
+      <li><button class="button is-responsive"> Magenta Fire</button></li>
+      <li><button class="button is-responsive"> Magenta Fire</button></li>
+      <li><button class="button is-responsive"> Magenta Fire</button></li>
+    </ul>
+
+    <a href="#categories-chosen" rel="modal:open"></a>
+
+
     <section class="section">
       <div class="container">
         <header class="header">
@@ -112,6 +126,7 @@
     >
     </iframe>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="./assets/js/maps.js"></script>
   </body>
