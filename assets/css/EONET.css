@@ -7,6 +7,20 @@ html {
     text-align: center;
 }
 
+#footer-header {
+    display: flex;
+    background-color: #0c0f1c;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.dropdown {
+    height: 40px;
+    padding-left: 900px;
+}
+
 .title {
     font-family: 'Roboto', sans-serif;
     color: #ffd900cc;

@@ -29,7 +29,7 @@
     </style>
   </head>
 
-  <header>
+  <div id="footer-header">
     <div>
       <a href="homepage.html"
         ><button class="button is-responsive">Back To Home</button></a
@@ -37,26 +37,29 @@
       <a href="APoD.html"><button class="button is-responsive">APoD</button></a>
     </div>
 
-    <label for="categories">Search by Categories:</label>
-    <select name="Categories" id="Categories">
-      <option>Select a Category</option>
-      <option value="6">Drought</option>
-      <option value="7">Dust and Haze</option>
-      <option value="16">Earthquakes</option>
-      <option value="9">Floods</option>
-      <option value="14">Landslides</option>
-      <option value="19">Manmade</option>
-      <option value="15">Sea and Lake Ice</option>
-      <option value="10">Severe Storms</option>
-      <option value="17">Snow</option>
-      <option value="18">Temperature Extremes</option>
-      <option value="12">Volcanoes</option>
-      <option value="13">Water Color</option>
-      <option value="8">Wildfires</option>
-    </select>
+    <div class="dropdown">
+      <label for="categories">Search by Categories:</label>
+      <select name="Categories" id="Categories">
+        <option>Select a Category</option>
+        <option value="6">Drought</option>
+        <option value="7">Dust and Haze</option>
+        <option value="16">Earthquakes</option>
+        <option value="9">Floods</option>
+        <option value="14">Landslides</option>
+        <option value="19">Manmade</option>
+        <option value="15">Sea and Lake Ice</option>
+        <option value="10">Severe Storms</option>
+        <option value="17">Snow</option>
+        <option value="18">Temperature Extremes</option>
+        <option value="12">Volcanoes</option>
+        <option value="13">Water Color</option>
+        <option value="8">Wildfires</option>
+      </select>
+    </div>
 
     <button id="categories-search" class="button is-responsive">Search</button>
-  </header>
+  </div>
+  
   <body>
     <section class="section">
       <div class="container">
