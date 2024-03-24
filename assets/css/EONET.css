@@ -16,14 +16,37 @@ html {
     display: flex;
     background-color: #0c0f1c;
     height: 90px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 0px 10px;
 }
 
 
 .dropdown {
     height: 40px;
-    padding-left: 900px;
+}
+
+select {
+  width: 200px;
+  background-color: grey;
+}
+.overflow {
+  height: 200px;
+}
+#categories-search {
+  background-color: grey;
+}
+
+#navigation {
+  justify-self: flex-start;
+}
+
+#home-button{
+  background-color: grey;
+}
+
+#APoD-button{
+  background-color: grey;
 }
 
 .title {
@@ -31,11 +54,19 @@ html {
     color: #ffd900cc;
 }
 
+.eonet-values {
+  color: rgba(255, 255, 255, 0.709);
+}
+
 .tile.is-child.box {
     background-color: #0c0f1c;
     color: #ffffff; 
     border-radius: 10px;
     box-shadow: 0 0 18px rgba(0, 0, 0, 0.524);
+}
+.tile.is-ancestor {
+  margin-right: -30rem;
+  margin-left: -10rem;
 }
 
 
@@ -46,7 +77,7 @@ html {
     align-items: center;
     justify-content: auto;
     justify-content: space-evenly;
-    padding: 200px;
+    padding: 50px;
 }
 
 #map {

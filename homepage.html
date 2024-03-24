@@ -11,18 +11,18 @@
     />
     <link rel="stylesheet" href="./assets/css/index.css" />
   </head>
-  <body class="has-background-grey">
     <header>
-      <section class="hero image is-fullheight">
+        <h1 id="header-title">N.D.B.</h1><h2 id="header-sub-title"></h2>
+    </header>
+    <body class="has-background-grey"></body>
+      <section class="hero image-is-fullheight">
         <!-- img is a place holder -->
         <hero class="is-flex-wrap-wrap">
-          <div id="homepage-title" class="header has-text-white has-text-weight-bold is-size-1">
-            <h1>Nasa Data base</h1>
-          </div>
+          
           <div class="apod">
             <div class="tile is-ancestor">
               <!-- added ids to direct title and description -AM -->
-              <div class="tile is-9 is-parent">
+              <div class="tile is-10 is-parent">
                 <div class="tile is-child box">
                   <p
                     id="APoD-title"
@@ -34,15 +34,13 @@
                     id="APoD-exp"
                     class="subtitle has-text-white has-text-weight-bold"
                   >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-                    quos odit perspiciatis asperiores fugit magni cum minus in qui.
-                    Saepe vitae est neque ipsam repellendus debitis tempore, natus
-                    doloribus dicta!
                   </p>
                 </div>
               </div>
             </div>
           </div>
+        </hero>
+      </section>
           <section class="section">
             <div class="container">
               <div class="tile is-ancestor">
@@ -52,9 +50,7 @@
                     <div class="tile is-child box">
                       <p class="title">EONET</p>
                       <p class="description">
-                        EONET is a repository of metadata about natural events.
-                        EONET is accessible via web services. EONET will drive
-                        your natural event application.
+                        EONET is a repository of metadata about natural events, receiving NRT (Near Real Time) weather data and imagery from all around the world.
                       </p>
                     </div>
                   </a>
@@ -87,9 +83,19 @@
               </div>
             </div>
           </section>
-        </hero>
-      </section>
-    </header>
+          <footer>
+            <ul id="developers">
+              <li>Austin Marlatt <a src="https://github.com/Austin-Marlatt">GitHub</a></li>
+              <li>Eduardo Espinoza Lopez <a src="https://github.com/Edesp1">GitHub</a></li> 
+              <li>Bryce Lenzi <a src="https://github.com/Rezovos">GitHub</a></li>
+              <li>Ruben Villalobos <a src="https://github.com/Rubenvill0811">GitHub</a></li>
+            </ul>
+            <ul id="source-links">
+              <li><a src="https://api.nasa.gov/">NASA APIs</a></li>
+              <li><a src="https://bulma.io/">Bulma CSS Framework</a></li>
+              <li><a src="https://jqueryui.com/">jQuery</a></li>
+            </ul>
+          </footer>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="./assets/js/index.js"></script>
   </body>
