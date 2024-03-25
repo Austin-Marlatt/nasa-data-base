@@ -11,11 +11,10 @@ fetch(
     // checks if HD image is availble, defaults to SD, sets to background-photo -AM
     if (data.hdurl) {
       let APoD = data.hdurl;
-      $("hero").css("background-image", `url(${APoD})`);
+      $(".hero").css("background-image", `url(${APoD})`);
     } else {
       let APoD = data.url;
-
-      $("hero").css("background-image", `url(${APoD})`);
+      $(".hero").css("background-image", `url(${APoD})`);
     }
     // retreives image title and explanation and writes it to the page -AM
     let title = data.title;

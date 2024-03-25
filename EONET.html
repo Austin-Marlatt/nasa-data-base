@@ -7,8 +7,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/build/ol.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/css/ol.css" type="text/css">
     <link
       rel="stylesheet"
       href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"
@@ -18,31 +18,20 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
     <link rel="stylesheet" href="./assets/css/EONET.css" />
-    <style>
-      label {
-        display: block;
-      }
-      select {
-        width: 200px;
-      }
-      .overflow {
-        height: 200px;
-      }
-    </style>
   </head>
-
+<header>
   <div id="footer-header">
-    <div>
-      <a href="homepage.html"
-        ><button class="button is-responsive">Back To Home</button></a
-      >
-      <a href="APoD.html"><button class="button is-responsive">APoD</button></a>
-    </div>
-
+  
+    <nav id="navigation">
+      <a href="homepage.html">
+        <button id="home-button" class="button is-responsive"><b>Back To Home</b></button>
+      </a>
+      <a href="APoD.html"><button id="APoD-button" class="button is-responsive"><b>APoD</b></button></a>
+    </nav>
 
     <div class="dropdown">
-      <label for="categories">Search by Categories:</label>
-      <select name="Categories" id="Categories">
+      <label for="categories"></label>
+      <select name="Categories" id="categories">
         <option>Select a Category</option>
         <option value="6">Drought</option>
         <option value="7">Dust and Haze</option>
@@ -58,25 +47,14 @@
         <option value="13">Water Color</option>
         <option value="8">Wildfires</option>
       </select>
+    <button id="categories-search" class="js-modal-trigger button is-responsive" data-target="modal-category-search">Search</button>
     </div>
-
-    <button id="categories-search" class="button is-responsive">Search</button>
   </div>
+</header>
   
   <body>
-    <a href="#categories-chosen" rel="modal:open"><button id="categories-search" class="button is-responsive">Search</button></a>
-  </header>
-
-    <ul id="categories-chosen" class = "modal">
-      <li><button class="button is-responsive"> Magenta Fire</button></li>
-      <li><button class="button is-responsive"> Magenta Fire</button></li>
-      <li><button class="button is-responsive"> Magenta Fire</button></li>
-      <li><button class="button is-responsive"> Magenta Fire</button></li>
-      <li><button class="button is-responsive"> Magenta Fire</button></li>
-    </ul>
-  
         <header class="header">
-          <h1 class="has-text-weight-bold title" style="font-size: 100px">
+          <h1 class="has-text-weight-bold title" style="font-size: 100px" >
             E.O.N.E.T
           </h1>
           <p class="is-size-2" style="color: white">
@@ -85,43 +63,40 @@
             <strong>T</strong>racker
           </p>
         </header>
+      <div id="main-content">
         <div class="wrapper">
           <div class="item item-1">
-            <div class="tile is-ancestor pt-6">
+            <div class="tile is-ancestor pt-1">
               <div class="tile is-parent is-6">
                 <div class="tile is-child box">
                   <section>
                     <!--Start of eonet Information-->
-                    <p class="title">Name:</p>
-                    <p class="has-text-weight-bold" id="title"></p>
-                    <p class="title">Eonet Id:</p>
-                    <p class="has-text-weight-bold" id="event-id"></p>
-                    <p class="title">Category:</p>
-                    <p class="has-text-weight-bold" id="category"></p>
-                    <p class="title">Time:</p>
-                    <p class="has-text-weight-bold" id="time-date"></p>
-                    <p class="title">Description:</p>
-                    <p id="description"></p>
-                    <p class="title">Units:</p>
-                    <p class="has-text-weight-bold" id="geometry-units"></p>
-                    <p class="title">Value:</p>
-                    <p class="has-text-weight-bold" id="geometry-value"></p>
-                    <p class="title">Source:</p>
-                    <p class="has-text-weight-bold" id="sources"></p>
+                    <p class="title">Name: <span class="has-text-weight-bold eonet-values" id="title"></span></p>
+                    <p class="title">Eonet Id: <span class="has-text-weight-bold eonet-values" id="event-id"></span></p>
+                    <p class="title">Category: <span class="has-text-weight-bold eonet-values" id="category"></span></p>
+                    <p class="title">Date: <span class="has-text-weight-bold eonet-values" id="time-date"></span></p>
+                    <p class="title">Description: <span class="has-text-weight-bold eonet-values" id="description"></span></p>
+                    <p class="title">Units: <span class="has-text-weight-bold eonet-values" id="geometry-units"></span></p>
+                    <p class="title">Value: <span class="has-text-weight-bold eonet-values" id="geometry-value"></span></p>
+                    <p class="title">Source: <span class="has-text-weight-bold eonet-values" id="sources"></span></p>
                   </section>
                   <!--End of eonet Information-->
                 </div>
               </div>
             </div>
           </div>
-          
+        </div>
         
+        <div>
+          <div id="map" class="map"></div>
+            <button id="layer-select" class="js-modal-trigger button is-responsive" data-target="modal-layer-select">SAT Layers</button>
+        </div>
         <!-- google maps API with my working key -AM -->
         <div class="item item-2">
           <iframe 
-          id="map"
-          width="650"
-          height="650"
+          id="google-map"
+          width="550"
+          height="550"
           style="border: 0"
           loading="lazy"
           allowfullscreen
@@ -129,11 +104,37 @@
           src="https://www.google.com/maps/embed/v1/place?key=AIzaSyALVHUah6fxUBeyPbNT4egSXn6uqKqjoR8
           &q=Space+Needle,Seattle+WA"
           >
-        </iframe>
+          </iframe>
         </div>
+      </div>
+      
+      <div id="selections" class="selections">
+        <div id="eventSelect"><dl id="eventList"></dl></div>
+        <!-- <div id="layerSelect"><dl id="layerList"></dl></div> -->
+      </div>
+
+    <div id="modal-category-search" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div id="content-search-result" class="box has-background-dark has-text-link">
           
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+        </div>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <div id="modal-layer-select" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div id="layerList" class="box has-background-dark has-text-link">
+          
+        </div>
+      </div>
+      <button class="modal-close " aria-label="close"></button>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="./assets/js/maps.js"></script>
+
   </body>
 </html>

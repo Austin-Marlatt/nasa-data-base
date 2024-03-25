@@ -1,18 +1,43 @@
-#homepage-title {
-    margin: 5% 0;
+
+header {
+    padding-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    background-color: #0c0f1c;
+    font-size: 45px;
+    color: #ffd900cc;
+    height: 80px;
 }
 
-.section {
-    padding-left: 200px;
-    padding-top: 300px;
+footer {
+    height:auto;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #ffd900cc;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    background-color: #0c0f1c;
+}
+
+.hero {
+    height: 900px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 .tile.is-child.box {
-    background-color: #0c0f1c;
+    background-color: #0c0f1cdc;
     color: #ffffff; 
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
+}
 
 .title {
     font-family: 'Roboto', sans-serif;
@@ -23,17 +48,18 @@
     font-family: 'Arial', sans-serif;
 }
 
-.header {
-    text-align: center;
-    color: aqua;
-}
-
 .apod {
+    position: absolute;
     text-align: center;
-    padding-top: 300px;
-   padding-left: 380px;
+    top: 70%;
+    left: 1%;
 }
 
-.container {
-    padding-top: 300px;
+.section {
+    padding: 150px;
+    background-image: url("../images/hubble-30th-veil-nebula.jpg");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    border: solid black 5px;
 }
