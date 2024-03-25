@@ -44,3 +44,11 @@ fetch("https://eonet.gsfc.nasa.gov/api/v3/events?limit=5")
     console.log(event.geometry);
     console.log(event.sources[0].url);
   });
+
+$(".apod").click(function () {
+  $(".apod").hide();
+});
+
+// $(".apod").click(function(){
+//   $("P").show();
+// });
