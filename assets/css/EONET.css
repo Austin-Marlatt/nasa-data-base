@@ -1,29 +1,33 @@
+body {
+  font-family: "Audiowide", sans-serif;
+}
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    background-color: grey;
-    background-image: url('https://www.worldatlas.com/upload/7d/db/c3/shutterstock-1558058690.jpg');
+  background-color: grey;
+  background-image: url("https://www.worldatlas.com/upload/7d/db/c3/shutterstock-1558058690.jpg");
 }
 
 .header {
-    text-align: center;
-    margin: 100px;
+  text-align: center;
+  margin: 100px;
+  font-family: "Audiowide", sans-serif;
 }
 
 #footer-header {
-    display: flex;
-    background-color: #0c0f1c;
-    height: 90px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 10px;
+  display: flex;
+  background-color: #0c0f1c;
+  height: 90px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
 }
 
-
 .dropdown {
-    height: 40px;
+  height: 40px;
 }
 
 select {
@@ -41,17 +45,17 @@ select {
   justify-self: flex-start;
 }
 
-#home-button{
+#home-button {
   background-color: grey;
 }
 
-#APoD-button{
+#APoD-button {
   background-color: grey;
 }
 
 .title {
-    font-family: 'Roboto', sans-serif;
-    color: #ffd900cc;
+  font-family: "Roboto", sans-serif;
+  color: #ffd900cc;
 }
 
 .eonet-values {
@@ -59,30 +63,26 @@ select {
 }
 
 .tile.is-child.box {
-    background-color: #0c0f1c;
-    color: #ffffff; 
-    border-radius: 10px;
-    box-shadow: 0 0 18px rgba(0, 0, 0, 0.524);
+  background-color: #0c0f1c;
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.524);
 }
-  .tile.is-ancestor {
+.tile.is-ancestor {
   margin-right: -30rem;
   margin-left: 0rem;
   padding: 0%;
-} 
-
+}
 
 .wrapper {
   flex: initial;
-} 
+}
 
 #google-map {
-    flex: initial;
-    /* position: absolute;
-    top: 60%;
-    left: 69%; */
-    border-radius: 10px;
-    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.357);
-    float: right;
+  flex: initial;
+  border-radius: 10px;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.357);
+  float: right;
 }
 
 .selections {
@@ -91,9 +91,6 @@ select {
 
 .map {
   flex: initial;
-  /* position: absolute;
-  top: 59.5%;
-  left: 35%; */
   height: 550px;
   width: 550px;
   background-color: rgba(0, 0, 0, 0.923);

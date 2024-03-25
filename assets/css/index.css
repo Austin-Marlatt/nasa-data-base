@@ -1,65 +1,74 @@
+body {
+  font-family: "Audiowide", sans-serif;
+}
 
 header {
-    padding-left: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    background-color: #0c0f1c;
-    font-size: 45px;
-    color: #ffd900cc;
-    height: 80px;
+  padding-left: 10px;
+  font-family: "Audiowide", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: left;
+  background-color: #0c0f1c;
+  font-size: 45px;
+  color: #ffd900cc;
+  height: 80px;
 }
 
 footer {
-    height:auto;
-    font-size: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
-    color: #ffd900cc;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-between;
-    background-color: #0c0f1c;
+  height: auto;
+  font-size: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #ffd900cc;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  background-color: #0c0f1c;
 }
 
 .hero {
-    height: 900px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+  height: 900px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .tile.is-child.box {
-    background-color: #0c0f1cdc;
-    color: #ffffff; 
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: #0c0f1cdc;
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .title {
-    font-family: 'Roboto', sans-serif;
-    color: #ffd900cc;
+  font-family: "Audiowide", sans-serif;
+  color: #ffd900cc;
 }
 
 .description {
-    font-family: 'Arial', sans-serif;
+  font-family: "Audiowide", sans-serif;
 }
 
 .apod {
-    position: absolute;
-    text-align: center;
-    top: 70%;
-    left: 1%;
+  position: absolute;
+  text-align: center;
+  top: 70%;
+  left: 1%;
 }
 
 .section {
-    padding: 150px;
-    background-image: url("../images/hubble-30th-veil-nebula.jpg");
-    background-position: center;
-    background-repeat: repeat;
-    background-size: cover;
-    border: solid black 5px;
+  padding: 150px;
+  background-image: url("../images/hubble-30th-veil-nebula.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  border: solid black 5px;
+}
+
+.title {
+  text-align: center;
+  font-size: 40px;
 }
