@@ -22,15 +22,15 @@ Under the APoD are cards with descriptions of the main api's used. On click they
 
 **Developers:**
 
--Austin Marlatt [GitHub](https://github.com/Austin-Marlatt)
--Ruben Villalobos [GitHub](https://github.com/Rubenvill0811)
--Bryce Lenzi [GitHub](https://github.com/Rezovos)
--Eduardo Espinoza [GitHub](https://github.com/Edesp1)
+- Austin Marlatt [GitHub](https://github.com/Austin-Marlatt)
+- Ruben Villalobos [GitHub](https://github.com/Rubenvill0811)
+- Bryce Lenzi [GitHub](https://github.com/Rezovos)
+- Eduardo Espinoza [GitHub](https://github.com/Edesp1)
 
 **APIs**
- -[NASA APIs](https://api.nasa.gov/)
- -[Google Maps Embed API](https://developers.google.com/maps/documentation/embed/get-started)
- -[Bulma CSS Framework](https://bulma.io/)
+ - [NASA APIs](https://api.nasa.gov/)
+ - [Google Maps Embed API](https://developers.google.com/maps/documentation/embed/get-started)
+ - [Bulma CSS Framework](https://bulma.io/)
 
  ## Deployment
 
