@@ -8,9 +8,6 @@ fetch(
   })
   .then(function (data) {
     console.log(data);
-    if (data.media_type == "video") {
-      videoId = "NqBfQeJqkfU";
-    }
     // checks if HD image is availble, defaults to SD, sets to background-photo -AM
     if (data.hdurl) {
       let APoD = data.hdurl;
@@ -29,44 +26,46 @@ fetch(
     explanationText.textContent = explanation;
   });
 
-  videoId = "NqBfQeJqkfU";
+  // hides the photo description and title if the card is clicked -AM
 $(".apod").click(function () {
   $(".apod").hide();
 });
 
-  var tag = document.createElement('script');
+// This code will be used in a future feature that will allow videos to play in place of a photo
 
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  // var tag = document.createElement('script');
 
-      var player;
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: '590',
-          width: '840',
-          videoId: videoId,
-          playerVars: {
-            'playsinline': 1
-          },
-          events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-          }
-        });
-      }
+  //     tag.src = "https://www.youtube.com/iframe_api";
+  //     var firstScriptTag = document.getElementsByTagName('script')[0];
+  //     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-      function onPlayerReady(event) {
-        event.target.playVideo();
-      }
+  //     var player;
+  //     function onYouTubeIframeAPIReady() {
+  //       player = new YT.Player('player', {
+  //         height: '590',
+  //         width: '840',
+  //         videoId: videoId,
+  //         playerVars: {
+  //           'playsinline': 1
+  //         },
+  //         events: {
+  //           'onReady': onPlayerReady,
+  //           'onStateChange': onPlayerStateChange
+  //         }
+  //       });
+  //     }
 
-      var done = false;
-      function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
-          setTimeout(stopVideo, 60000);
-          done = true;
-        }
-      }
-      function stopVideo() {
-        player.stopVideo();
-      }
+  //     function onPlayerReady(event) {
+  //       event.target.playVideo();
+  //     }
+
+  //     var done = false;
+  //     function onPlayerStateChange(event) {
+  //       if (event.data == YT.PlayerState.PLAYING && !done) {
+  //         setTimeout(stopVideo, 60000);
+  //         done = true;
+  //       }
+  //     }
+  //     function stopVideo() {
+  //       player.stopVideo();
+  //     }

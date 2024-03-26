@@ -162,7 +162,7 @@ function categorySearchBtn(search) {
         "src",
         `https://www.google.com/maps/embed/v1/place?key=AIzaSyALVHUah6fxUBeyPbNT4egSXn6uqKqjoR8&q=${location}`
       );
-      // passes event id to showlayers() to provide relevant sat-image layers
+      // passes event id to showlayers() to provide relevant sat-image layers -AM
       showLayers(event.id);
     });
 }
@@ -214,6 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// the following code was borrowed from an example at https://api.nasa.gov/ and edited to fit our use case -AM
 var server = "https://eonet.gsfc.nasa.gov/api/v3";
 
 // Show the available layers for the event category
