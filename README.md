@@ -2,7 +2,7 @@
 
 ## Description
 
-A web application where users can view and interact with multiple NASA apis
+A web application where users can view and interact with multiple NASA APIs
 
 ## Installation
 
@@ -14,7 +14,7 @@ A user will be greeted by the APoD (Astronomy Picture of the Day) when page load
 
 ![image](https://github.com/Austin-Marlatt/nasa-data-base/assets/148661094/2083d218-d06d-4b97-92b3-667e4d504307)
 
-Under the APoD are cards with descriptions of the main api's used. On click they will take a user to a new page where they can interact with that api.
+Under the APoD are cards with descriptions of the main APIs used. On click, they will take a user to a new page where they can interact with that API.
 
 ![image](https://github.com/Austin-Marlatt/nasa-data-base/assets/148661094/4c1210ed-3067-4e47-9716-ceb9e14bbb9d)
 
