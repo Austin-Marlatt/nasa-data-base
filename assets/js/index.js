@@ -8,6 +8,9 @@ fetch(
   })
   .then(function (data) {
     console.log(data);
+    if (data.media_type == "video") {
+      videoId = "NqBfQeJqkfU";
+    }
     // checks if HD image is availble, defaults to SD, sets to background-photo -AM
     if (data.hdurl) {
       let APoD = data.hdurl;
@@ -26,29 +29,44 @@ fetch(
     explanationText.textContent = explanation;
   });
 
-// no API key needed? -AM
-fetch("https://eonet.gsfc.nasa.gov/api/v3/events?limit=5")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data);
-
-    console.log(data.events);
-    let event = data.events[0];
-    console.log(event);
-    console.log(event.title);
-    console.log(event.id);
-    console.log(event.categories[0].title);
-    console.log(event.description);
-    console.log(event.geometry);
-    console.log(event.sources[0].url);
-  });
-
+  videoId = "NqBfQeJqkfU";
 $(".apod").click(function () {
   $(".apod").hide();
 });
 
-// $(".apod").click(function(){
-//   $("P").show();
-// });
+  var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '590',
+          width: '840',
+          videoId: videoId,
+          playerVars: {
+            'playsinline': 1
+          },
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 60000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
