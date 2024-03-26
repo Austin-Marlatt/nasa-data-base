@@ -57,6 +57,7 @@ function dateSearch(searchDate) {
       return response.json();
     })
     .then(function (data) {
+      console.log(data);
       // conditional, checks if an HD version is available, defaults to SD if not -AM
       if (data.hdurl) {
         // variables to store APoD metadata we want to use -AM
